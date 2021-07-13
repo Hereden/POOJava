@@ -6,6 +6,8 @@ public class Principal {
 		Scanner leer=new Scanner(System.in);
 		
 		CuentaBancaria cuenta_personal = new CuentaBancaria("Carlos eduardo", 1461.14f);
+		//cuenta_personal.setSaldo(-1239.76f);
+		//System.out.println(cuenta_personal.getSaldo());
 		//CuentaBancaria cuenta_secundaria= new CuentaBancaria();
 		/*
 		 * Menú cajero.
@@ -15,6 +17,8 @@ public class Principal {
 		 * 4. Estado de cuenta
 		 * 5. Agregar beneficiario
 		 * 6. Salir*/
+		
+		
 		int opcion=0;
 		String s="Ingresa la opción deseada"+
 		"1. Retiro\r\n"
@@ -45,13 +49,13 @@ public class Principal {
 				break;
 			case 4:
 				System.out.println("El beneficiario de la cuenta es " +
-						cuenta_personal.beneficiario);
+						cuenta_personal.getBeneficiario());
 				System.out.println("********************");
 				break;
 			case 5:
 				System.out.println("Ingrese el nombre del beneficiario");
 				String nombre=leer.nextLine();
-				cuenta_personal.beneficiario=nombre;
+				cuenta_personal.setBeneficiario(nombre);
 				System.out.println("********************");
 				break;
 			}
